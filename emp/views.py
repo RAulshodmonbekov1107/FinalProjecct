@@ -40,7 +40,7 @@ def delete_emp(request,emp_id):
 
 def update_emp(request,emp_id):
     emp=Emp.objects.get(pk=emp_id)
-    print("Yes Bhai")
+    print("Yes ")
     return render(request,"emp/update_emp.html",{
         'emp':emp
     })

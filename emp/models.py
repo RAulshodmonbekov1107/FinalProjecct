@@ -11,7 +11,7 @@ class Department(models.Model):
 class Emp(models.Model):  # Renamed from Employee to Emp
     name = models.CharField(max_length=200)
     emp_id = models.CharField(max_length=200)
-    phone = models.CharField(max_length=10)
+    phone = models.CharField(max_length=20)
     address = models.CharField(max_length=150)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     supervisor = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
