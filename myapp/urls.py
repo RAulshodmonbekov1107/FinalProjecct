@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import *
 import emp.views as fun
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",fun.emp_home),
@@ -25,3 +26,4 @@ urlpatterns = [
     path("services/",services),
     path("emp/",include('emp.urls'))
 ]
+urlpatterns+=staticfiles_urlpatterns()
